@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Zero-TTA: Zero-shot and High-Fidelity Text-to-Talking Avatar Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zero-TTA: Zero-shot and High-Fidelity Text-to-Talking Avatar Synthesis</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <h1 class="title is-1 publication-title">
+          Zero-TTA: Zero-shot and High-Fidelity Text-to-Talking Avatar Synthesis </h1>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">
+            Anonymous Authors</span>
+        </div>
+      </div>  
+    </div>
+    
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Text-to-talking avatar generation could transform the plain text content 
+            into a vivid talking person video, which has broad prospects in real-world 
+            applications such as audio-visual chatbot. The existing methods typically 
+            use a cascading framework to generate the speech and facial expression, 
+            which results in degraded performance and system redundancy. Besides, 
+            the existing systems are typically limited to several seen identities 
+            during training, which requires expensive fine-tuning to adapt to a unseen identity. 
+            To this end, we propose Zero-TTA, the first end-to-end and zero-shot text-to-avatar synthesizer. 
+            Given a few-second-long video of an identity as the style prompt and arbitrary texts 
+            as the only driving input,  without any adaptation, we aim to synthesize 
+            audio-visual-synchornized talking person videos with high identity similarity 
+            in terms of synthesized audio and video frames. Generally, 
+            we devise an auto-encoder framework that learns to encode and reconstruct 
+            the audio-motion pairs of arbitrary identity given the text content and several style attributes.
+            Specifically, we train two style encoders to model the global style attributes 
+            (such as timbre and talking style) and the local style attributes (such as pitch and tiny expression). 
+            With the help of local/global style information and the text content, 
+            the decoder could predict synchronized audio-motion pairs with high coherence to the target identity.
+            We also propose a local prosody langugae model to obtain the local style encoding during inference, 
+            which is modeled as vector-quantized code sequence. With these designs, our method becomes 
+            the first end-to-end and zero-shot text-to-avatar system. Experiments demonstrate 
+            that our method could synthesize realistic, style-preserving, and audio-visual synchronized talking avatar videos.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Overall Framework -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Overall Framework</h2>
+        <div class="content has-text-justified">
+          <p>
+            The overall inference process of Zero-TTA is demonstrated as follows:
+          </p>
+          <p>
+            <img src="./static/images/inference.png"
+      class="interpolation-image"
+      alt="The inference process of Zero-TTA."/>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Overall Framework -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Main compare video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Main Demo Video</h2>
+        <!-- <video id="main-compare-video"
+                controls
+                muted
+                preload
+                playsinline
+                width="90%">
+          <source src="./static/videos/main_compare.mp4"
+                  type="video/mp4">
+        </video> -->
+        <div class="content has-text-justified">
+          <p>
+            Zero-TTA demos with various inputs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Main compare video. -->
+
+    <!-- Ref weight video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison Video for Text-to-avatar Setting</h2>
+        <!-- <video id=""
+                controls
+                muted
+                preload
+                playsinline
+                width="90%">
+          <source src="./static/videos/compare_tta.mp4"
+                  type="video/mp4">
+        </video> -->
+        <div class="content has-text-justified">
+          <p>
+            Comparison between Zero-TTA and state-of-the-art text-to-avatar baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Ref weight video. -->
+
+    <!-- Mouth compare video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Comparison Video for Audio-driven Setting</h2>
+        <!-- <video id=""
+                controls
+                muted
+                preload
+                playsinline
+                width="90%">
+          <source src="./static/videos/compare_ad.mp4"
+                  type="video/mp4">
+        </video> -->
+        <div class="content has-text-justified">
+          <p>
+            Comparison between Zero-TTA and state-of-the-art audio-driven talking face generation baselines.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Mouth compare video. -->
+
+  </div>
+</section>
+
+
+
+</body>
+</html>
