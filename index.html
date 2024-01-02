@@ -126,31 +126,18 @@
           <source src="./static/videos/MainDemo.mp4"
                   type="video/mp4">
         </video>
-        <div class="content has-text-justified">
+        <!-- <div class="content has-text-justified">
           <p>
             Zero-TTA demos with various inputs.
           </p>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Comparison Audios for Audio Generation</h2>
-        <!-- <video id=""
-                controls
-                muted
-                preload
-                playsinline
-                width="90%">
-          <source src="./static/videos/compare_tta.mp4"
-                  type="video/mp4">
-        </video> -->
-        <div class="content has-text-justified">
-          <p>
-            Comparison between Zero-TTA and state-of-the-art text-to-speech baselines.
-          </p>
-        </div>
+        
       </div>
     </div>
 
@@ -166,6 +153,40 @@
           <source src="./static/videos/compare_ad.mp4"
                   type="video/mp4">
         </video> -->
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-GT-7-V">
+            <video poster="" id="GT-7-V" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/GT/7.mp4"
+                      type="video/mp4">
+            </video>
+            <div>
+              Ground Truth
+            </div>
+          </div>
+          <div class="item item-ours-7-V">
+            <video poster="" id="ours-7-V" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/ours/7.mp4"
+                      type="video/mp4">
+            </video>
+            <div>
+              Zero-TTA(Ours)
+            </div>
+          </div>
+          <div class="item item-SadTalker-7-V">
+            <video poster="" id="SadTalker-7-V" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/SadTalker/7.mp4"
+                      type="video/mp4">
+            </video>
+            <div>
+              SadTalker
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Comparison between Zero-TTA and state-of-the-art text-to-speech baselines.
+          </p>
+        </div>
         <div class="content has-text-justified">
           <p>
             Comparison between Zero-TTA and state-of-the-art audio-driven talking-face-generation baselines.
