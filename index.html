@@ -41,6 +41,7 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
+<style> .table-warped {overflow:scroll;}</style>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -144,6 +145,8 @@
           </p>
         </div>
         <!-- <table style="width: 100%; overflow:scroll; "> -->
+        <li style="text-align: left;font-size: 20px; font-style: italic">"And thereby multiplying our ability to act let me give one example which is sometimes quoted in the opposite direction when we were still trying to mediate a solution at the beginning of the eucranian crisis on the twenty first of february"</li> 
+
         <div class="table-warped">
           <table style="overflow:scroll;">
             <thead>
@@ -166,8 +169,31 @@
             </tbody>
           </table>
         </div>
+        <li style="text-align: left;font-size: 20px; font-style: italic">"just gars and motocycles and busses"</li> 
+
+        <div class="table-warped">
+          <table>
+            <thead>
+              <tr>
+                  <!-- <th></th> -->
+                  <th align="center">GT</th>
+                  <th align="center">Zero-TTA(Ours)</th>
+                  <th align="center">FastSpeech 2</th>
+                  <th align="center">PortaSpeech</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <!-- <th scope="row">wav</th> -->
+                  <td><audio controls preload><source src="static/audio/GT/12.wav" type="audio/wav"></audio></td>
+                  <td><audio controls preload><source src="static/audio/ours/12.wav" type="audio/wav"></audio></td>
+                  <td><audio controls preload><source src="static/audio/FastSpeech2/12.wav" type="audio/wav"></audio></td>
+                  <td><audio controls preload><source src="static/audio/PortaSpeech/12.wav" type="audio/wav"></audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- <style> .table-warped {width:500; max-width: 500; overflow:scroll;}</style> -->
-        <style> .table-warped {overflow:scroll;}</style>
 
       </div>
     </div>
